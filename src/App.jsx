@@ -1,13 +1,16 @@
-import { useState } from 'react'
+import { Routes, Route } from 'react-router';
 import NavBar from './components/NavBar/NavBar';
 import './App.css'
+import SignUpForm from './components/SignUpForm/SignUpForm';
 
 const App = () => {
   
   return (
     <>
       <NavBar />
-      <h1>Hello, friend!</h1>
+        <Routes>
+        <Route path='/sign-up' element={<SignUpForm />} />
+      </Routes>
     </>
   );
 };
